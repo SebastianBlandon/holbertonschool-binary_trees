@@ -24,6 +24,13 @@ size_t binary_tree_size(const binary_tree_t *tree)
 	return (counter);
 }
 
+/**
+ * go_to_binary_tree - function that go to the binary tree
+ * @tree: pointer to the root node of the tree
+ * @counter: size_t variable
+ * If tree is NULL, your function must return 0
+ * Return: size of tree
+ */
 size_t go_to_binary_tree(const binary_tree_t *tree, size_t counter)
 {
 	if (!tree)
