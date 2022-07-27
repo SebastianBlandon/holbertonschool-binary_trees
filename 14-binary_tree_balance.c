@@ -10,6 +10,9 @@ int binary_tree_balance(const binary_tree_t *tree)
 {
 	int left = 0, right = 0;
 
+	if (!tree)
+		return (0);
+
 	left = recursive_height(tree->left);
 	right = recursive_height(tree->right);
 	return (left - right);
