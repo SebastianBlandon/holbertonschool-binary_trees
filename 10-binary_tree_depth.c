@@ -5,7 +5,7 @@
  */
 size_t recursion_depth(const binary_tree_t *tree, size_t counter)
 {
-	if (!tree->parent)
+	if (!tree)
 		return (counter);
 
 	return (recursion_depth(tree->parent, counter + 1));
@@ -21,5 +21,5 @@ size_t binary_tree_depth(const binary_tree_t *tree)
 	if (!tree->parent)
 		return (0);
 
-	return (recursion_depth(tree, 0));
+	return (recursion_depth(tree, 0) - 1);
 }
