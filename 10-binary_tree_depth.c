@@ -1,7 +1,9 @@
 #include "binary_trees.h"
 /**
- * @brief 
- * 
+ * recursion_depth - function that measures the depth of a node in a binary tree
+ * @tree: binary tree
+ * @counter: counter
+ * Return: counter
  */
 size_t recursion_depth(const binary_tree_t *tree, size_t counter)
 {
@@ -18,7 +20,7 @@ size_t recursion_depth(const binary_tree_t *tree, size_t counter)
  */
 size_t binary_tree_depth(const binary_tree_t *tree)
 {
-	if (!tree->parent)
+	if (!tree)
 		return (0);
 
 	return (recursion_depth(tree, 0) - 1);
