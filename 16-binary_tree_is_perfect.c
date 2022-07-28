@@ -13,9 +13,12 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	if (!tree)
 		return (0);
 
-	left = recursive_height(tree->left);
-	right = recursive_height(tree->right);
-	if (left == right)
-		return (1);
+	if (recursive_height(tree->left) == recursive_height(tree->right))
+	{
+		left = recursive_height(tree->left);
+		right = recursive_height(tree->right);
+		if (left == right)
+			return (1);
+	}
 	return (0);
 }
