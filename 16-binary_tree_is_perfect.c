@@ -31,10 +31,11 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 bool is_perfect(const binary_tree_t *root, int d, int level)
 {
 	if (root == NULL)
-		return (true);
+		return (false);
 
 	if (root->left == NULL && root->right == NULL)
-		return (d == level + 1);
+		if (d == level + 1)
+			return (true);
 
 	if (root->left == NULL || root->right == NULL)
 		return (false);
